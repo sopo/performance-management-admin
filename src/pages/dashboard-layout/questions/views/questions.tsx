@@ -61,7 +61,7 @@ console.log("questions", questions)
       />
        <Column
         title={t("dashboard.questions.columns.category_ka")}
-        dataIndex="category_en"
+        dataIndex="category_ka"
       />
      
       <Column
