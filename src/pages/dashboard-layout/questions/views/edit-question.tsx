@@ -1,7 +1,7 @@
 import { useForm } from "antd/es/form/Form";
 import { useAtom } from "jotai";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { UserAtom } from "@/store/auth";
 import QuestionForm from "../components/question-form";
 import { AUTH_PATHS } from "@/pages/authorization-layout/auth.enum";
@@ -48,7 +48,7 @@ const EditQuestion: React.FC = () => {
     return <Navigate to={AUTH_PATHS.SIGN_IN} />;
   }
 
-  const handleSubmit = (values: QuestionProps) => {
+  const handleSubmit = (values: QuestionInsert) => {
     if (id) {
       mutate(values);
     } else {

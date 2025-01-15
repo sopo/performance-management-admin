@@ -1,9 +1,9 @@
 import { useMutation } from "react-query";
 import { addQuestion } from "@/api/questions/add-question";
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert, } from "@/interfaces/types";
 
 const useAddQuestion = (onSuccess: () => void) => {
-  const mutation = useMutation((values: QuestionProps) => addQuestion(values), {
+  const mutation = useMutation((values: QuestionInsert) => addQuestion(values), {
     onSuccess,
   });
 

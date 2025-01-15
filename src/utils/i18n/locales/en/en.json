@@ -41,7 +41,10 @@
       "form": {
         "title": "Add Question",
         "titleEdit": "Edit Question",
-        "category": "Category",
+        "question_en": "Question En",
+        "category_en": "Category En",
+        "question_ka": "Question Ka",
+        "category_ka": "Category Ka",
         "cta": "Save",
         "required": "This field is required"
       }

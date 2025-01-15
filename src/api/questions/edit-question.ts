@@ -1,9 +1,9 @@
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { supabase } from "@/supabase";
 
 export const editQuestion = async (
   id: number | string,
-  payload: QuestionProps,
+  payload: QuestionInsert,
 ) => {
   const { data, error } = await supabase
     .from("questions")

@@ -1,19 +1,19 @@
 import { getquestion } from "@/api/questions/get-question";
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { UseQueryOptions, UseQueryResult, useQuery } from "react-query";
 import { QUERY_KEYS } from "./enums";
 
-const useGetQuestion = <T = QuestionProps>({
+const useGetQuestion = <T = QuestionInsert>({
   id,
   queryOptions,
 }: {
   id: string | undefined;
   queryOptions?: Omit<
-    UseQueryOptions<QuestionProps, Error, T>,
+    UseQueryOptions<QuestionInsert, Error, T>,
     "queryKey" | "queryFn"
   >;
 }): UseQueryResult<T, Error> => {
-  return useQuery<QuestionProps, Error, T>({
+  return useQuery<QuestionInsert, Error, T>({
     queryKey: [QUERY_KEYS.QUESTION, id],
     queryFn: async () => {
       if (!id) {
