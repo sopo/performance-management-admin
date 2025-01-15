@@ -1,9 +1,9 @@
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { supabase } from "@/supabase";
 
 export const getquestion = async (
   id: number | string,
-): Promise<QuestionProps | null> => {
+): Promise<QuestionInsert | null> => {
   const { data, error } = await supabase
     .from("questions")
     .select("*")

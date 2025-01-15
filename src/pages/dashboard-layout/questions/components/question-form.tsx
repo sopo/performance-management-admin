@@ -1,4 +1,4 @@
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { Button, Form, FormInstance, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { Trans, useTranslation } from "react-i18next";
@@ -6,8 +6,8 @@ import { Trans, useTranslation } from "react-i18next";
 const { Item } = Form;
 
 interface questionFormProps {
-  initialValues?: QuestionProps;
-  onSubmit: (values: QuestionProps) => void;
+  initialValues?: QuestionInsert;
+  onSubmit: (values:QuestionInsert) => void;
   form: FormInstance;
 }
 
@@ -29,8 +29,8 @@ const QuestionForm: React.FC<questionFormProps> = ({
       className="w-full"
     >
       <Item
-        label={t("dashboard.questions.question")}
-        name="title"
+        label={t("dashboard.questions.form.question_en")}
+        name="title_en"
         rules={[
           {
             required: true,
@@ -38,12 +38,24 @@ const QuestionForm: React.FC<questionFormProps> = ({
           },
         ]}
       >
-        <TextArea placeholder={t("dashboard.questions.question")} />
+        <TextArea placeholder={t("dashboard.questions.form.question_en")} />
+      </Item>
+      <Item
+        label={t("dashboard.questions.form.question_ka")}
+        name="title_ka"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.questions.form.required</Trans>,
+          },
+        ]}
+      >
+        <TextArea placeholder={t("dashboard.questions.form.question_ka")} />
       </Item>
 
       <Item
-        label={t("dashboard.questions.form.category")}
-        name="category"
+        label={t("dashboard.questions.form.category_en")}
+        name="category_en"
         rules={[
           {
             required: true,
@@ -51,7 +63,21 @@ const QuestionForm: React.FC<questionFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("dashboard.questions.form.category")} />
+        <Input placeholder={t("dashboard.questions.form.category_en")} />
+      </Item>
+      
+
+      <Item
+        label={t("dashboard.questions.form.category_ka")}
+        name="category_ka"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.questions.form.required</Trans>,
+          },
+        ]}
+      >
+        <Input placeholder={t("dashboard.questions.form.category_ka")} />
       </Item>
 
     

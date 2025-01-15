@@ -1,4 +1,4 @@
-import { QuestionProps } from "@/interfaces/types";
+import { QuestionInsert } from "@/interfaces/types";
 import { UserAtom } from "@/store/auth";
 import { useAtom } from "jotai";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,7 @@ const AddQuestion: React.FC = () => {
     navigate(`/${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_LIST}`);
   });
 
-  const handleSubmit = (values: QuestionProps) => {
+  const handleSubmit = (values: QuestionInsert) => {
     mutate(values);
   };
 
