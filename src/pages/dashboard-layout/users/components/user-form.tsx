@@ -1,12 +1,12 @@
 import { RegisterProps } from "@/interfaces/interfaces";
+import { ProfileInsert } from "@/interfaces/types";
 import { Button, Form, FormInstance, Input } from "antd";
 import { Trans, useTranslation } from "react-i18next";
-
 const { Item } = Form;
 
 interface EditUserFormProps {
-  initialValues?: RegisterProps;
-  onSubmit: (values: RegisterProps) => void;
+  initialValues?: RegisterProps & ProfileInsert;
+  onSubmit: (values: RegisterProps & ProfileInsert) => void;
   form: FormInstance;
 }
 
