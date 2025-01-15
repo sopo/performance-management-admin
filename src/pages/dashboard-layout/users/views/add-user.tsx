@@ -8,6 +8,8 @@ import { AUTH_PATHS } from "@/pages/authorization-layout/auth.enum";
 import useAddUser from "@/hooks/use-add-user";
 import { USERS_PATHS } from "../users-routes";
 import { useForm } from "antd/es/form/Form";
+import { ProfileInsert } from "@/interfaces/types";
+
 
 const AddUser: React.FC = () => {
   const [user] = useAtom(UserAtom);
@@ -18,7 +20,7 @@ const AddUser: React.FC = () => {
     navigate(`/${USERS_PATHS.USERS}/${USERS_PATHS.USERS_LIST}`);
   });
 
-  const handleSubmit = (values: RegisterProps) => {
+  const handleSubmit = (values: RegisterProps & ProfileInsert) => {
     mutate(values);
   };
 
