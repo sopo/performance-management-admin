@@ -10,7 +10,6 @@ import { USERS_PATHS } from "../users-routes";
 import { useForm } from "antd/es/form/Form";
 import { ProfileInsert } from "@/interfaces/types";
 
-
 const AddUser: React.FC = () => {
   const [user] = useAtom(UserAtom);
   const { t } = useTranslation();

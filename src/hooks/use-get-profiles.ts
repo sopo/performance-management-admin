@@ -1,12 +1,7 @@
 import { Profile } from "@/interfaces/types";
 import { QUERY_KEYS } from "./enums";
-import {
-  UseQueryOptions,
-  UseQueryResult,
-  useQuery,
-} from "react-query";
+import { UseQueryOptions, UseQueryResult, useQuery } from "react-query";
 import { getProfiles } from "@/api/profiles/get-profiles";
-
 
 const useGetProfiles = <T = Profile[]>({
   queryOptions,

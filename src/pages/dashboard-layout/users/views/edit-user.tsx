@@ -62,7 +62,14 @@ const EditUser: React.FC = () => {
 
       <EditUserForm
         form={form}
-        initialValues={{ email: data?.email || "", password: "", subordinates: data?.user_metadata.subordinates || "", role: data?.user_metadata.role || "", manager: data?.user_metadata.manager || "", name: data?.user_metadata.name }}
+        initialValues={{
+          email: data?.email || "",
+          password: "",
+          subordinates: data?.user_metadata.subordinates || "",
+          role: data?.user_metadata.role || "",
+          manager: data?.user_metadata.manager || "",
+          name: data?.user_metadata.name,
+        }}
         onSubmit={handleSubmit}
       />
     </div>

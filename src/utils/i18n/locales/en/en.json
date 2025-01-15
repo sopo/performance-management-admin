@@ -18,13 +18,12 @@
         "titleEdit": "Edit User Details",
         "email": "Email",
         "password": "Password",
-        "cta": "Save", 
+        "cta": "Save",
         "required": "This field is required",
         "full_name_en": "Full Name En",
         "full_name_ka": "Full Name Ka",
         "position_en": "Position En",
         "position_ka": "Position Ka"
-       
       }
     },
     "questions": {

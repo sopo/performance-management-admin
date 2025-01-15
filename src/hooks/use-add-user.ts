@@ -4,9 +4,12 @@ import { RegisterProps } from "@/interfaces/interfaces";
 import { ProfileInsert } from "@/interfaces/types";
 
 const useAddUser = (onSuccess: () => void) => {
-  const mutation = useMutation((values: RegisterProps & ProfileInsert) => AddUserApi(values), {
-    onSuccess,
-  });
+  const mutation = useMutation(
+    (values: RegisterProps & ProfileInsert) => AddUserApi(values),
+    {
+      onSuccess,
+    },
+  );
 
   return {
     mutate: mutation.mutate,

@@ -39,7 +39,8 @@ const EditQuestion: React.FC = () => {
   if (isquestionError) {
     return (
       <div>
-        Error: {questionError instanceof Error ? questionError.message : "Error"}
+        Error:{" "}
+        {questionError instanceof Error ? questionError.message : "Error"}
       </div>
     );
   }

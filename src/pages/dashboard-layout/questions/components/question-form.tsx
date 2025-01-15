@@ -7,7 +7,7 @@ const { Item } = Form;
 
 interface questionFormProps {
   initialValues?: QuestionInsert;
-  onSubmit: (values:QuestionInsert) => void;
+  onSubmit: (values: QuestionInsert) => void;
   form: FormInstance;
 }
 
@@ -65,7 +65,6 @@ const QuestionForm: React.FC<questionFormProps> = ({
       >
         <Input placeholder={t("dashboard.questions.form.category_en")} />
       </Item>
-      
 
       <Item
         label={t("dashboard.questions.form.category_ka")}
@@ -79,10 +78,6 @@ const QuestionForm: React.FC<questionFormProps> = ({
       >
         <Input placeholder={t("dashboard.questions.form.category_ka")} />
       </Item>
-
-    
-
-     
 
       <Item label={null}>
         <Button type="primary" htmlType="submit" block>
