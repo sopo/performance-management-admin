@@ -1,6 +1,6 @@
-import { QuestionsListProps } from "../interfaces/types";
+import { QuestionInsert } from "../interfaces/types";
 
-export const mapQuestionsList = (questions: QuestionsListProps) => {
+export const mapQuestionsList = (questions: QuestionInsert[]) => {
   return questions?.map((question) => ({
     title_en: question?.title_en,
     title_ka: question?.title_ka,

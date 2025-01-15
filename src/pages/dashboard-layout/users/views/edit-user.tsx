@@ -8,6 +8,7 @@ import EditUserForm from "../components/user-form";
 import { USERS_PATHS } from "../users-routes";
 import useGetUser from "@/hooks/use-get-user";
 import useEditUser from "@/hooks/use-edit-user";
+import useGetProfileWithId from "@/hooks/use-get-profile-with-id";
 
 const EditUser: React.FC = () => {
   const navigate = useNavigate();
@@ -22,12 +23,13 @@ const EditUser: React.FC = () => {
     isError: isEditError,
     error: editError,
   } = useEditUser(id || "", () => {
-    navigate(`/users/${USERS_PATHS.USERS_LIST}`);
+    navigate(`/${USERS_PATHS.USERS}/${USERS_PATHS.USERS_LIST}`);
   });
 
   const { data, isLoading, isError, error } = useGetUser({
     id: id || "",
   });
+  const {data: profile} = useGetProfileWithId({ id: id || ""})
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -65,10 +67,12 @@ const EditUser: React.FC = () => {
         initialValues={{
           email: data?.email || "",
           password: "",
-          subordinates: data?.user_metadata.subordinates || "",
-          role: data?.user_metadata.role || "",
-          manager: data?.user_metadata.manager || "",
-          name: data?.user_metadata.name,
+          position_en: profile?.position_en,
+          position_ka: profile?.position_ka,
+          display_name_en: profile?.display_name_en,
+          display_name_ka: profile?.display_name_ka
+          
+        
         }}
         onSubmit={handleSubmit}
       />
