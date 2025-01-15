@@ -66,6 +66,8 @@ const EditQuestion: React.FC = () => {
         initialValues={{
           title_en: data?.title_en || "",
           category_en: data?.category_en || "",
+          title_ka: data?.title_ka || "",
+          category_ka: data?.category_ka || ""
         }}
         onSubmit={handleSubmit}
       />
