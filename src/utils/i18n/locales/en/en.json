@@ -20,10 +20,10 @@
         "password": "Password",
         "cta": "Save", 
         "required": "This field is required",
-        "fullNameEn": "Full Name En",
-        "fullNameKa": "Full Name Ka",
-        "positionEn": "Position En",
-        "positionKa": "Position Ka"
+        "full_name_en": "Full Name En",
+        "full_name_ka": "Full Name Ka",
+        "position_en": "Position En",
+        "position_ka": "Position Ka"
        
       }
     },

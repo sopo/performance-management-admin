@@ -29,7 +29,7 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
     >
       {" "}
       <Item
-        label={t("name en")}
+        label={t("dashboard.users.form.full_name_en")}
         name="display_name_en"
         rules={[
           {
@@ -38,10 +38,10 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("dashboard.users.form.name")} />
+        <Input placeholder={t("dashboard.users.form.full_name_en")} />
       </Item>
       <Item
-        label={t("name ka")}
+        label={t("dashboard.users.form.full_name_ka")}
         name="display_name_ka"
         rules={[
           {
@@ -50,10 +50,10 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("name ka")} />
+        <Input placeholder={t("dashboard.users.form.full_name_ka")} />
       </Item>
       <Item
-        label={t("position en")}
+        label={t("dashboard.users.form.position_en")}
         name="position_en"
         rules={[
           {
@@ -62,10 +62,10 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("posiition en")} />
+        <Input placeholder={t("dashboard.users.form.position_en")} />
       </Item>
       <Item
-        label={t("position Ka")}
+        label={t("dashboard.users.form.position_ka")}
         name="position_ka"
         rules={[
           {
@@ -74,7 +74,7 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("position ka")} />
+        <Input placeholder={t("dashboard.users.form.position_ka")} />
       </Item>
       <Item
         label={t("email")}
