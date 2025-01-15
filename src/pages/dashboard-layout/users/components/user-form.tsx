@@ -26,61 +26,58 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
       autoComplete="off"
       layout="vertical"
       className="w-full"
-    > <Item
-    label={t("dashboard.users.form.name")}
-    name="name"
-    rules={[
-      {
-        required: true,
-        message: <Trans>dashboard.users.form.required</Trans>,
-      },
-    ]}
-  >
-    <Input placeholder={t("dashboard.users.form.name")} />
-  </Item>
-
-  <Item
-    label={t("dashboard.users.form.role")}
-    name="role"
-    rules={[
-      {
-        required: true,
-        message: <Trans>dashboard.users.form.required</Trans>,
-      },
-    ]}
-  >
-    <Input placeholder={t("dashboard.users.form.role")} />
-  </Item>
-
-
-  <Item
-    label={t("dashboard.users.form.subordinates")}
-    name="subordinates"
-    rules={[
-      {
-        required: true,
-        message: <Trans>dashboard.users.form.required</Trans>,
-      },
-    ]}
-  >
-    <Input placeholder={t("dashboard.users.form.subordinates")} />
-  </Item>
-
-
-  <Item
-    label={t("dashboard.users.form.manager")}
-    name="manager"
-    rules={[
-      {
-        required: true,
-        message: <Trans>dashboard.users.form.required</Trans>,
-      },
-    ]}
-  >
-    <Input placeholder={t("dashboard.users.form.manager")} />
-  </Item>
+    >
+      {" "}
       <Item
-        label={t("dashboard.users.form.email")}
+        label={t("name en")}
+        name="display_name_en"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.users.form.required</Trans>,
+          },
+        ]}
+      >
+        <Input placeholder={t("dashboard.users.form.name")} />
+      </Item>
+      <Item
+        label={t("name ka")}
+        name="display_name_ka"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.users.form.required</Trans>,
+          },
+        ]}
+      >
+        <Input placeholder={t("name ka")} />
+      </Item>
+      <Item
+        label={t("position en")}
+        name="position_en"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.users.form.required</Trans>,
+          },
+        ]}
+      >
+        <Input placeholder={t("posiition en")} />
+      </Item>
+      <Item
+        label={t("position Ka")}
+        name="position_ka"
+        rules={[
+          {
+            required: true,
+            message: <Trans>dashboard.users.form.required</Trans>,
+          },
+        ]}
+      >
+        <Input placeholder={t("position ka")} />
+      </Item>
+      <Item
+        label={t("email")}
         name="email"
         rules={[
           {
@@ -89,9 +86,8 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
           },
         ]}
       >
-        <Input placeholder={t("dashboard.users.form.email")} />
+        <Input placeholder={t("email")} />
       </Item>
-
       <Item
         label={t("dashboard.users.form.password")}
         name="password"
@@ -104,7 +100,6 @@ const EditUserForm: React.FC<EditUserFormProps> = ({
       >
         <Input placeholder={t("dashboard.users.form.password")} />
       </Item>
-
       <Item label={null}>
         <Button type="primary" htmlType="submit" block>
           {t("dashboard.users.form.cta")}
