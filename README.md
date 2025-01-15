@@ -49,5 +49,4 @@ export default tseslint.config({
 });
 ```
 
-
 # performance-management-admin

@@ -1,9 +1,8 @@
 import { User } from "@supabase/supabase-js";
 import { formatDate } from "./format-date";
 
-
 export const mapUsersList = (users: User[]) => {
-  console.log("users", users)
+  console.log("users", users);
   return users?.map((user) => ({
     email: user?.email,
     created_at: user?.created_at ? formatDate(user.created_at) : "-",
@@ -12,8 +11,6 @@ export const mapUsersList = (users: User[]) => {
     app_metadata: user?.app_metadata ?? {},
     user_metadata: user?.user_metadata ?? {},
     aud: user?.aud ?? "",
-    id: user?.id
-
-
+    id: user?.id,
   }));
 };

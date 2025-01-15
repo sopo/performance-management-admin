@@ -27,4 +27,3 @@ export const AddUser = async (payload: RegisterProps & ProfileInsert) => {
     throw error;
   }
 };
-

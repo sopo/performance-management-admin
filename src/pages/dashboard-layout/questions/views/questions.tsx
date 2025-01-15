@@ -6,7 +6,6 @@ import { QUESTIONS_PATHS } from "../question-routes";
 import { mapQuestionsList } from "@/utils/map-questions-list";
 import useGetQuestions from "@/hooks/use-get-questions";
 
-
 const { Column } = Table;
 const Questions: React.FC = () => {
   const { t } = useTranslation();
@@ -29,7 +28,7 @@ const Questions: React.FC = () => {
   if (isError) {
     return <div>Error: {error instanceof Error ? error.message : "Error"}</div>;
   }
-console.log("questions", questions)
+  console.log("questions", questions);
   return (
     <Table
       title={() => (
@@ -51,7 +50,7 @@ console.log("questions", questions)
         title={t("dashboard.questions.columns.title_en")}
         dataIndex="title_en"
       />
-          <Column
+      <Column
         title={t("dashboard.questions.columns.title_ka")}
         dataIndex="title_ka"
       />
@@ -59,11 +58,11 @@ console.log("questions", questions)
         title={t("dashboard.questions.columns.category_ka")}
         dataIndex="category_en"
       />
-       <Column
+      <Column
         title={t("dashboard.questions.columns.category_ka")}
         dataIndex="category_ka"
       />
-     
+
       <Column
         title={t("dashboard.questions.columns.actions")}
         render={(_, row) => {

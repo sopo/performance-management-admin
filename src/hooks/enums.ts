@@ -4,5 +4,5 @@ export enum QUERY_KEYS {
   USERS = "users",
   USER = "user",
   USER_SESSION = "user-session",
-  PROFILES="profiles"
+  PROFILES = "profiles",
 }

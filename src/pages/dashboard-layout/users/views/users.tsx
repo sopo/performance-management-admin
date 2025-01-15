@@ -10,7 +10,6 @@ import { mapProfilesList } from "@/utils/map-profiles-list";
 
 const { Column } = Table;
 const Users: React.FC = () => {
-
   const { t } = useTranslation();
   const navigate = useNavigate();
   const handleEditClick = (id: string) => {
@@ -23,8 +22,9 @@ const Users: React.FC = () => {
     isError,
     error,
   } = useGetUsers({ queryOptions: { select: mapUsersList } });
-  const {data: profiles} = useGetProfiles({queryOptions: {select: mapProfilesList}})
-
+  const { data: profiles } = useGetProfiles({
+    queryOptions: { select: mapProfilesList },
+  });
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -33,16 +33,16 @@ const Users: React.FC = () => {
     return <div>Error: {error instanceof Error ? error.message : "Error"}</div>;
   }
   const mergedData = profiles?.map((profile) => {
-    const user = users?.find((user) => user.id === profile.user_id); 
+    const user = users?.find((user) => user.id === profile.user_id);
     return user
       ? {
-          ...user,       
-          ...profile,    
+          ...user,
+          ...profile,
         }
-      : profile;        
+      : profile;
   });
 
-  console.log("users", users)
+  console.log("users", users);
   return (
     <Table
       title={() => (
@@ -67,15 +67,15 @@ const Users: React.FC = () => {
         title={t("dashboard.users.columns.fullNameEn")}
         dataIndex="display_name_en"
       />
-       <Column
+      <Column
         title={t("dashboard.users.columns.fullNameKa")}
         dataIndex="display_name_ka"
       />
-       <Column
+      <Column
         title={t("dashboard.users.columns.positionEn")}
         dataIndex="position_en"
       />
-       <Column
+      <Column
         title={t("dashboard.users.columns.positionKa")}
         dataIndex="position_ka"
       />

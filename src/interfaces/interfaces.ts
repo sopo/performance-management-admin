@@ -9,7 +9,7 @@ export interface RegisterProps {
   name: string;
   subordinates: string;
   manager: string;
-  role: string
+  role: string;
 }
 export interface Route {
   path: string;

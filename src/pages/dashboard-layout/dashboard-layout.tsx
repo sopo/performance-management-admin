@@ -5,13 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { USERS_PATHS } from "./users/users-routes";
 import { QUESTIONS_PATHS } from "./questions/question-routes";
-
-const { Header, Content, Footer, Sider } = Layout;
-
-const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
+const { Content, Footer, Sider } = Layout;
 
 const DashboardLayout: React.FC = () => {
   const { t } = useTranslation();
@@ -27,7 +21,9 @@ const DashboardLayout: React.FC = () => {
     {
       key: "questions",
       label: (
-        <Link to={`${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_LIST}`}>
+        <Link
+          to={`${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_LIST}`}
+        >
           {t("dashboard.questions.title")}
         </Link>
       ),
@@ -40,16 +36,6 @@ const DashboardLayout: React.FC = () => {
 
   return (
     <Layout>
-      <Header style={{ display: "flex", alignItems: "center" }}>
-        <div className="demo-logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={["2"]}
-          items={items1}
-          style={{ flex: 1, minWidth: 0 }}
-        />
-      </Header>
       <Content className="m-10">
         <Layout
           style={{
