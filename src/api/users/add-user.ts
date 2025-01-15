@@ -1,5 +1,6 @@
 import { supabase } from "@/supabase";
 import { RegisterProps } from "@/interfaces/interfaces";
+import { ProfileInsert } from "@/interfaces/types";
 export const AddUser = async (payload: RegisterProps) => {
   try {
     const { data, error } = await supabase.auth.admin.createUser({
@@ -19,3 +20,20 @@ export const AddUser = async (payload: RegisterProps) => {
     throw error;
   }
 };
+
+export const addProfile = async(payload: ProfileInsert) => {
+  const profileData = {
+    display_name_en: payload.display_name_en || null,
+    display_name_ka: payload.display_name_ka || null,
+    position_en: payload.position_en || null,
+    position_ka: payload.position_ka || null,
+};
+
+ await supabase
+.from('profiles')
+.insert([
+  profileData
+])
+.select()
+
+}
