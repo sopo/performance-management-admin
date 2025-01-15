@@ -23,7 +23,7 @@ const EditUser: React.FC = () => {
     isError: isEditError,
     error: editError,
   } = useEditUser(id || "", () => {
-    navigate(`/users/${USERS_PATHS.USERS_LIST}`);
+    navigate(`/${USERS_PATHS.USERS}/${USERS_PATHS.USERS_LIST}`);
   });
 
   const { data, isLoading, isError, error } = useGetUser({
