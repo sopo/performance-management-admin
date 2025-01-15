@@ -44,7 +44,7 @@ const Questions: React.FC = () => {
       )}
       bordered
       dataSource={questions}
-      rowKey="key"
+     
     >
       <Column
         title={t("dashboard.questions.columns.title_en")}
@@ -70,7 +70,7 @@ const Questions: React.FC = () => {
             <EditOutlined
               className="text-xl text-gray-600 hover:cursor-pointer"
               onClick={() => {
-                handleEditClick(row.key);
+                handleEditClick(row.id);
               }}
             />
           );
