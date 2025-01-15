@@ -10,7 +10,7 @@ const { Column } = Table;
 const Questions: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleEditClick = (id: number) => {
+  const handleEditClick = (id: string) => {
     navigate(
       `/${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_EDIT}/${id}`,
     );

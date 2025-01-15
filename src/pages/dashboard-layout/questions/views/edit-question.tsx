@@ -15,16 +15,16 @@ const EditQuestion: React.FC = () => {
   const [user] = useAtom(UserAtom);
   const [form] = useForm();
   const { id } = useParams();
-
+  const questionId = id || ""
   const {
     mutate,
     isLoading: isquestionLoading,
     isError: isquestionError,
     error: questionError,
-  } = useEditQuestion(id, () => {
+  } = useEditQuestion(questionId, () => {
     navigate(`/${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_LIST}`);
   });
-  const { data, isLoading, isError, error } = useGetQuestion({id: id || null});
+  const { data, isLoading, isError, error } = useGetQuestion({id: questionId });
   if (isLoading) {
     return <div>Loading...</div>;
   }
