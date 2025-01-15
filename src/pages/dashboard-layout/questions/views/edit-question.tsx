@@ -21,10 +21,10 @@ const EditQuestion: React.FC = () => {
     isLoading: isquestionLoading,
     isError: isquestionError,
     error: questionError,
-  } = useEditQuestion(id || "", () => {
+  } = useEditQuestion(id, () => {
     navigate(`/${QUESTIONS_PATHS.QUESTIONS}/${QUESTIONS_PATHS.QUESTIONS_LIST}`);
   });
-  const { data, isLoading, isError, error } = useGetQuestion({ id });
+  const { data, isLoading, isError, error } = useGetQuestion({id: id || null});
   if (isLoading) {
     return <div>Loading...</div>;
   }

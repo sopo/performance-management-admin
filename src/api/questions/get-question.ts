@@ -1,7 +1,7 @@
 import { QuestionInsert } from "@/interfaces/types";
 import { supabase } from "@/supabase";
 
-export const getquestion = async (
+export const getQuestion = async (
   id: number | string,
 ): Promise<QuestionInsert | null> => {
   const { data, error } = await supabase

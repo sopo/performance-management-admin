@@ -7,5 +7,6 @@ export const mapQuestionsList = (questions: QuestionInsert[]) => {
     category_en: question?.category_en,
     category_ka: question?.category_ka,
     key: question?.title_en,
+    id: question?.id
   }));
 };

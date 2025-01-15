@@ -1,32 +1,14 @@
-import { getquestion } from "@/api/questions/get-question";
-import { QuestionInsert } from "@/interfaces/types";
-import { UseQueryOptions, UseQueryResult, useQuery } from "react-query";
 import { QUERY_KEYS } from "./enums";
+import { useQuery } from "react-query";
+import { getQuestion } from "@/api/questions/get-question";
 
-const useGetQuestion = <T = QuestionInsert>({
-  id,
-  queryOptions,
-}: {
-  id: string | undefined;
-  queryOptions?: Omit<
-    UseQueryOptions<QuestionInsert, Error, T>,
-    "queryKey" | "queryFn"
-  >;
-}): UseQueryResult<T, Error> => {
-  return useQuery<QuestionInsert, Error, T>({
+const useGetQuestion = ({ id }: { id: number }) => {
+  return useQuery({
     queryKey: [QUERY_KEYS.QUESTION, id],
     queryFn: async () => {
-      if (!id) {
-        throw new Error("id is missing");
-      }
-      const result = await getquestion(id);
-      if (!result) {
-        throw new Error("question is missing");
-      }
-      return result;
+      const result = await getQuestion(id);
+      return result || null;
     },
-    enabled: !!id,
-    ...queryOptions,
   });
 };
 
