@@ -32,8 +32,10 @@
       "question": "Question",
       "cta": "Add Question",
       "columns": {
-        "title": "Question",
-        "category": "Category",
+        "title_en": "Question En",
+        "title_ka": "Question Ka",
+        "category_en": "Category En",
+        "category_ka": "Category Ka",
         "actions": "Actions"
       },
       "form": {

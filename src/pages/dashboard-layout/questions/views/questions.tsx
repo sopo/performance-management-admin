@@ -1,10 +1,8 @@
 import { Button, Table } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-
 import { useTranslation } from "react-i18next";
 import { QUESTIONS_PATHS } from "../question-routes";
-
 import { mapQuestionsList } from "@/utils/map-questions-list";
 import useGetQuestions from "@/hooks/use-get-questions";
 
@@ -50,12 +48,20 @@ console.log("questions", questions)
       rowKey="key"
     >
       <Column
-        title={t("dashboard.questions.columns.title")}
-        dataIndex="title"
+        title={t("dashboard.questions.columns.title_en")}
+        dataIndex="title_en"
+      />
+          <Column
+        title={t("dashboard.questions.columns.title_ka")}
+        dataIndex="title_ka"
       />
       <Column
-        title={t("dashboard.questions.columns.category")}
-        dataIndex="category"
+        title={t("dashboard.questions.columns.category_ka")}
+        dataIndex="category_en"
+      />
+       <Column
+        title={t("dashboard.questions.columns.category_ka")}
+        dataIndex="category_en"
       />
      
       <Column
