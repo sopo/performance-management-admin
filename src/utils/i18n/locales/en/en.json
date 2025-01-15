@@ -1,0 +1,52 @@
+{
+  "dashboard": {
+    "users": {
+      "title": "Users",
+      "cta": "Add User",
+      "columns": {
+        "email": "Email",
+        "registrationDate": "Registration Date",
+        "lastSignedIn": "Last Signed In",
+        "fullName": "Full Name",
+        "actions": "Actions"
+      },
+      "form": {
+        "titleAdd": "Add User",
+        "titleEdit": "Edit User Details",
+        "email": "Email",
+        "password": "Password",
+        "cta": "Save", 
+        "required": "This field is required",
+        "name": "Full Name",
+        "role": "Role",
+        "subordinates": "Subordinates",
+        "manager": "manager"
+      }
+    },
+    "questions": {
+      "title": "Questions",
+      "question": "Question",
+      "cta": "Add Question",
+      "columns": {
+        "title": "Question",
+        "category": "Category",
+        "actions": "Actions"
+      },
+      "form": {
+        "title": "Add Question",
+        "titleEdit": "Edit Question",
+        "category": "Category",
+        "cta": "Save",
+        "required": "This field is required"
+      }
+    }
+  },
+  "signIn": {
+    "title": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember Me",
+    "required": "This field is required",
+    "cta": "Sign In"
+  }
+}
