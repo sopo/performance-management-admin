@@ -7,7 +7,10 @@
         "email": "Email",
         "registrationDate": "Registration Date",
         "lastSignedIn": "Last Signed In",
-        "fullName": "Full Name",
+        "fullNameEn": "Full Name En",
+        "fullNameKa": "Full Name Ka",
+        "positionEn": "Position En",
+        "positionKa": "Position Ka",
         "actions": "Actions"
       },
       "form": {
@@ -17,10 +20,11 @@
         "password": "Password",
         "cta": "Save", 
         "required": "This field is required",
-        "name": "Full Name",
-        "role": "Role",
-        "subordinates": "Subordinates",
-        "manager": "manager"
+        "fullNameEn": "Full Name En",
+        "fullNameKa": "Full Name Ka",
+        "positionEn": "Position En",
+        "positionKa": "Position Ka"
+       
       }
     },
     "questions": {

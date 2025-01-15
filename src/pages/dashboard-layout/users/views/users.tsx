@@ -51,8 +51,20 @@ const Users: React.FC = () => {
         dataIndex="created_at"
       />
       <Column
-        title={t("dashboard.users.columns.fullName")}
-        dataIndex="fullName"
+        title={t("dashboard.users.columns.fullNameEn")}
+        dataIndex="fullNameEn"
+      />
+       <Column
+        title={t("dashboard.users.columns.fullNameKa")}
+        dataIndex="fullNameKa"
+      />
+       <Column
+        title={t("dashboard.users.columns.positionEn")}
+        dataIndex="positionEn"
+      />
+       <Column
+        title={t("dashboard.users.columns.positionKa")}
+        dataIndex="positionKa"
       />
       <Column
         title={t("dashboard.users.columns.actions")}
