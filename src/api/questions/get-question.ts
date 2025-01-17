@@ -2,7 +2,7 @@ import { QuestionInsert } from "@/interfaces/types";
 import { supabase } from "@/supabase";
 
 export const getQuestion = async (
-  id: string,
+  id: number,
 ): Promise<QuestionInsert | null> => {
   const { data, error } = await supabase
     .from("questions")

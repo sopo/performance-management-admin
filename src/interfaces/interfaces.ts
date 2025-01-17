@@ -6,7 +6,6 @@ export interface AuthProps {
 export interface RegisterProps {
   email: string;
   password: string;
-
 }
 export interface Route {
   path: string;

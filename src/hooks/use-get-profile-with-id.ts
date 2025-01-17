@@ -3,7 +3,6 @@ import { QUERY_KEYS } from "./enums";
 import { useQuery, UseQueryResult } from "react-query";
 import { getProfileWithId } from "@/api/profiles/get-profile-with-id";
 
-
 const useGetProfiles = <T = Profile>({
   id,
 }: {

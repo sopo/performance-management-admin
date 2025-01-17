@@ -44,7 +44,6 @@ const Questions: React.FC = () => {
       )}
       bordered
       dataSource={questions}
-     
     >
       <Column
         title={t("dashboard.questions.columns.title_en")}
