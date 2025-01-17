@@ -55,7 +55,7 @@ const Questions: React.FC = () => {
         dataIndex="title_ka"
       />
       <Column
-        title={t("dashboard.questions.columns.category_ka")}
+        title={t("dashboard.questions.columns.category_en")}
         dataIndex="category_en"
       />
       <Column

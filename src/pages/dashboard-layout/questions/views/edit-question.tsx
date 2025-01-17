@@ -5,7 +5,6 @@ import { QuestionInsert } from "@/interfaces/types";
 import { UserAtom } from "@/store/auth";
 import QuestionForm from "../components/question-form";
 import { AUTH_PATHS } from "@/pages/authorization-layout/auth.enum";
-
 import { QUESTIONS_PATHS } from "../question-routes";
 import useEditQuestion from "@/hooks/use-edit-question";
 import useGetQuestion from "@/hooks/use-get-question";
@@ -44,7 +43,6 @@ const EditQuestion: React.FC = () => {
       </div>
     );
   }
-
   if (!user) {
     return <Navigate to={AUTH_PATHS.SIGN_IN} />;
   }
