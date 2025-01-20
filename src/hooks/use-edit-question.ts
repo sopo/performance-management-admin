@@ -2,7 +2,7 @@ import { useMutation } from "react-query";
 import { editQuestion } from "@/api/questions/edit-question";
 import { QuestionInsert } from "@/interfaces/types";
 
-const useEditquestion = (id: string, onSuccess: () => void) => {
+const useEditquestion = (id: number, onSuccess: () => void) => {
   const mutation = useMutation(
     (values: QuestionInsert) => {
       if (id) {

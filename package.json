@@ -10,13 +10,13 @@
     "preview": "vite preview",
     "prepare": "husky",
     "typescript": "tsc -b",
-    "format": "prettier . --write",
+    "prettier": "prettier . --write",
     "supabase-ts": "npx supabase gen types --lang=typescript --project-id syndlausevccpbmtztfx --schema public > src/supabase/database.types.ts"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
     "@supabase/supabase-js": "^2.47.10",
-    "antd": "^5.22.5",
+    "antd": "^5.23.1",
     "dayjs": "^1.11.13",
     "i18next": "^24.1.2",
     "jotai": "^2.10.4",

@@ -44,7 +44,6 @@ const Questions: React.FC = () => {
       )}
       bordered
       dataSource={questions}
-     
     >
       <Column
         title={t("dashboard.questions.columns.title_en")}
@@ -55,7 +54,7 @@ const Questions: React.FC = () => {
         dataIndex="title_ka"
       />
       <Column
-        title={t("dashboard.questions.columns.category_ka")}
+        title={t("dashboard.questions.columns.category_en")}
         dataIndex="category_en"
       />
       <Column
